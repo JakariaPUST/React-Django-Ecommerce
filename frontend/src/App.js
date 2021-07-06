@@ -7,6 +7,9 @@ import Header from './components/Header'
 import HomeScreens from './sreens/HomeScreens'
 import ProductScreen from './sreens/ProductScreen'
 import CartScreen from './sreens/CartScreen'
+import LoginScreen from './sreens/LoginScreen'
+
+
 function App() {
   return (
     <Router>
@@ -15,6 +18,8 @@ function App() {
       <main className="py-3">
         <Container>
         <Route path='/' component={HomeScreens} exact/>
+        <Route path='/login' component={LoginScreen} />
+        
         <Route path='/product/:id' component={ProductScreen} />
         <Route path='/cart/:id?' component={CartScreen} />
         </Container>
